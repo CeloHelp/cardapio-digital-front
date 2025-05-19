@@ -1,0 +1,12 @@
+<h2>Lista de Produtos</h2>
+
+<div *ngIf="produtos.length === 0">Nenhum produto cadastrado.</div>
+
+<ul *ngIf="produtos.length > 0">
+  <li *ngFor="let produto of produtos">
+    <strong>{{ produto.nome }}</strong> - {{ produto.descricao }} <br>
+    <small>Preço: R$ {{ produto.preco | number:'1.2-2' }}</small>
+    <hr>
+  </li>
+</ul>
+
